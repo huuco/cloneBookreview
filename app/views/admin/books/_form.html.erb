@@ -1,0 +1,32 @@
+<%= form_for [:admin, @book] do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+
+  <%= f.label :name, t(".name") %>
+  <%= f.text_field :name, class: "form-control" %><br>
+
+  <%= f.label :description, t(".description") %>
+  <%= f.text_area :description, class: "form-control" %><br>
+
+  <%= f.label :image, t(".image") %>
+  <%= f.file_field :image, class: "form-control",
+   accept: "image/jpeg,image/gif,image/png" %><br>
+
+  <div class="row">
+    <div class="col-md-6">
+      <%= f.label :author, t(".author") %>
+      <%= f.text_field :author, class: "form-control" %>
+
+      <%= f.label :number_of_pages, t(".number_of_pages") %>
+      <%= f.number_field :number_of_pages, class: "form-control" %>
+
+      <%= f.label :price, t(".price") %>
+      <%= f.number_field :price, class: "form-control" %>
+    </div>
+  </div>
+
+  <%= f.label :category_id %>
+  <%= f.collection_select(:category_id, Category.order(:title), :id, :title,
+   {prompt: true},{class: "form-control"}) %><br>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

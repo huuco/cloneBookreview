@@ -1,0 +1,170 @@
+en:
+  flash:
+    not_found: "Not found"
+    login_fail: "Incorrect email or password"
+    check_mail: "Check E-mail"
+    destroy_fail: "Delete failed"
+    save_success: "Create succeed"
+    update_success: "Update succeed"
+    update_fail: "Update failed"
+    destroy_succes: "Delete success"
+    log_in_success: "Login is successfully"
+    update_success: "Update succeed"
+    destroy_success: "Delete succeed"
+    logout_success: "Logout is successfully"
+    account_success: "Account success"
+    invalid_link: "Invalid link error"
+    please_login: "Please you must login"
+    permission: "You no permission access"
+  layouts:
+    application:
+      book_review: "Book review"
+    header:
+      home: "Home"
+      login: "Login"
+      search: "Search"
+      search: "Search"
+      action: "Action"
+      logout: "Logout"
+      list_read: "List read"
+      list_reading: "List reading"
+      favorite: "Favorite"
+      reading: "Reading"
+      read: "Read"
+      list_mark: "List mark"
+      register: "Register"
+      mark: "Mark this book"
+      list_book: "List books"
+      list_user: "List users"
+      book_review: "Bookreview"
+      list_follow: "List follow"
+      list_cat: "List categroies"
+      list_request: "List requests"
+      list_favorite: "List favarite"
+      change_info: "Change information"
+      handler_request: "Handler request"
+    footer:
+      title_book_demo: "Title book demo"
+  static_pages:
+    home:
+      title_book_demo: "Tam Quốc Diễn Nghĩa"
+      review: "Review"
+      new_book: "New book"
+      top_rate: "Top rate"
+      top_read: "Top read"
+      top_review: "Top review"
+  users:
+    form:
+      name: "Name"
+      email: "Email"
+      phone: "Phone"
+      create: "Create"
+      password: "password"
+      password_confirmation: "Password confirmation"
+    new:
+      register: "Register"
+  user_mailer:
+    hi: "Hi"
+    activate: "Activate"
+    account_activation: "Account activation"
+    welcome: "Welcome to  the Framgia Book review !click on the link below to  activate your account: "
+  sessions:
+    new:
+      login: "Login"
+      email: "E-mail"
+      password: "Password"
+  requests:
+    form:
+      create: "Create"
+      content: "Content"
+      book_name: "Book name"
+    edit:
+      edit: "Edit"
+      edit_request: "Edit requests"
+      form_request: "Form request"
+    new:
+      create: "Create"
+      new_request: "New request"
+      form_request: "Form request"
+  admin:
+    books:
+      more_than: "File images more than 4MB"
+      index:
+        add: "Add"
+        name: "Name"
+        author: "Author"
+        category: "Category"
+        list_book: "List books"
+        created_at: "Create at"
+        show_all: "Show all book"
+        type_something: "Type some thing"
+      new:
+        create: "Create"
+        new_book: "Add new book"
+      edit:
+        edit: "Edit"
+        edit_book: "Edit book"
+      form:
+        name: "Name"
+        price: "Price"
+        image: "Image"
+        author: "Author"
+        create: "Create"
+        description: "Description"
+        number_of_pages: "Number of pages"
+      book:
+        edit: "Edit"
+        view: "View"
+        delete: "Delete"
+        confirm: "Confirm delete book"
+    requests:
+      index:
+        action: "Action"
+        status: "Status"
+        user_request: "User request"
+        book_name: "Book name"
+        request_at: "Request at"
+        list_request: "List Requests"
+      edit:
+        edit: "Edit"
+        status: "status"
+        update: "Update"
+        edit_request: "Edit Request"
+      new:
+        create: "Create"
+      form:
+        content: "Content"
+        book_name: "Book name"
+      request:
+        done: "Done"
+        view: "View"
+        edit: "Edit"
+        delete: "Delete"
+        in_progess: "In Progress"
+        confirm: "confirmation delete request"
+  my_requests:
+    index:
+      status: "Status"
+      book_name: "Book name"
+      request_at: "Request at"
+      list_request: "List requests"
+  mark_books:
+    index:
+      list_mark: "List Mark"
+  search_books:
+    index:
+      search_result: "Search result: "
+  users:
+    show:
+      follower: "Follower"
+      following: "Following"
+      email: "E-mail"
+      phone: "Phone"
+      name: "Name"
+    follow:
+      follow: "Follow"
+    unfollow:
+      unfollow: "UnFollow"
+    edit:
+      update: "Update"
+      password_confirmation: "Password confirmation"

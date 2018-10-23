@@ -1,0 +1,5 @@
+<div class="col-md-3">
+  <% image = book.image.present? ? book.image.thumb.url : "no_image.png" %>
+  <%= image_tag(image, class: "image-book") %>
+  <h5><%= link_to book.name, book %></h5>
+</div>

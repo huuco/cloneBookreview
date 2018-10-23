@@ -1,0 +1,38 @@
+<center>
+  <h1><%= t ".profile" %></h1>
+</center>
+<div class="row">
+  <div class="col-md-4">
+    <center>
+      <% image = @user.avatar.present? ? @user.avatar.thumb.url : "no_avatar.png" %>
+      <%= image_tag image, class: "imag-avatar", style: "width: 150px" %>
+      <%= t(".follower") %>: <span id="followers"><%= @user.followers.count %></span>
+      <%= t(".following") %>: <span id="followers"><%= @user.following.count %></span>
+    </center>
+    <% if @user != current_user %>
+      <div id="form-relationship">
+        <%= render "form_relationship" %>
+      </div>
+    <% end %>
+    <hr>
+    <%= t ".name" %> : <%= @user.name %>
+    <hr>
+    <%= t ".email" %> : <%= @user.email %>
+    <hr>
+    <%= t ".phone" %> : <%= @user.phone %>
+    <hr>
+    <% if @user == current_user %>
+      <center>
+      <%= link_to t(".change_info"), edit_user_path, class: "btn btn-success" %>
+      </center>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <ul class="nav nav-tabs">
+        <li class="active" data-tab_id="<%= Settings.from_tab_follower %>"></li>
+      </ul>
+    </div>
+
+  </div>
+</div>

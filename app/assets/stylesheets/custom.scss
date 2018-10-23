@@ -1,0 +1,84 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'color.scss';
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a {
+    color: $gray;
+    &:hover{
+      color: $gray-darker;
+    }
+  }
+}
+small {
+  float: left;
+}
+
+ul {
+  float: right;
+  list-style: none;
+  li {
+    float: left;
+    margin-left: 15px;
+  }
+}
+.hi-user {
+    top: 15px;
+    position: relative;
+}
+
+.title-rating {
+  font-weight: 550;
+}
+
+.title-book-name {
+  margin-top: 0px;
+}
+
+.checked {
+  color: orange;
+}
+.btn-mark-book {
+  position: relative;
+  top: 10px;
+  left: 100px;
+}
+.image-cat-book {
+  width: 220px;
+}
+.image-book {
+  width: 220px;
+}
+#txt_search {
+  width: 250px;
+}
+.result_search {
+  z-index: 1000;
+  background-color: $gray-result-search;
+  top: 84%;
+  max-height: 200px;
+  position: absolute;
+  width: 250px;
+  left: 15px;
+  overflow-y: scroll;
+  ul {
+    padding-left: 10px;
+  }
+  li {
+    list-style-type: none;
+    padding: 10px;
+    &:hover{
+      background-color: silver;
+    }
+  }
+}
+ .ul-result_search {
+  display: none;
+}
+.imag-avatar {
+  border: 3px solid silver;
+}

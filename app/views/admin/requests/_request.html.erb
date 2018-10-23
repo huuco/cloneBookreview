@@ -1,0 +1,16 @@
+<tr>
+  <td ><%= index_record @requests, request_counter %></td>
+  <td class="text-center"><%= request.book_name %></td>
+  <td class="text-center"><%= request.user_name %></td>
+  <td class="text-center">
+    <%= status_request(request.status).html_safe %></td>
+  <td class="text-center"><%= request.created_at %></td>
+  <td class="text-center">
+    <%= link_to t(".view"), admin_request_path(request),
+     class: "btn btn-primary btn-sm" %>
+    <%= link_to t(".edit"), edit_admin_request_path(request),
+     class: "btn btn-warning btn-sm"  %>
+    <%= link_to t(".delete"), admin_request_path(request), method: :delete,
+     data: {confirm: t(".confirm")}, class: "btn btn-danger btn-sm" %>
+  </td>
+</tr>

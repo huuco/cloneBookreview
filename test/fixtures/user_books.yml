@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  read: 1
+  favorite: false
+  reading: false
+  request: false
+  user_id: 1
+  book_id: 1
+
+two:
+  read: 1
+  favorite: false
+  reading: false
+  request: false
+  user_id: 1
+  book_id: 1

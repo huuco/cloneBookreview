@@ -1,0 +1,9 @@
+<%= form_for[:admin, @request], remote: true,  do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+
+  <%= f.label :book_name, t(".book_name") %>
+  <%= f.text_field :book_name, class: "form-control", readonly: true %><br>
+  <%= f.label :content, t(".content") %>
+  <%= f.text_area :content, class: "form-control", readonly: true %><br>
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

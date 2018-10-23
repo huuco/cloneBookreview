@@ -1,0 +1,17 @@
+<center><h1><%= t ".review" %></h1></center>
+<div class="col-md-8">
+  <%= render "form" %>
+</div>
+<div class="col-md-4">
+  <div class="row">
+    <div class="col-md-12">
+      <% @book.image.present? ? @book.image.thumb.url : "no_image.png" %>
+      <%= image_tag image, class: "image-book" %>
+    </div>
+    <div class="col-md-12">
+      <h2 class="title-book-name"><%= @book.name %></h2>
+      <h4><%= @book.author %></h4>
+      <p><%= @book.description %></p>
+    </div>
+  </div>
+</div>

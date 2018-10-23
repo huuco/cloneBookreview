@@ -1,0 +1,9 @@
+paginate_home_page: 5
+maximum_phone: 9
+paginate_page: 5
+minnimum_password: 6
+mini_description: 50
+width_thumb_book: 300
+height_thumb_book: 400
+validate_size_image: 4
+minimum_content_review: 50

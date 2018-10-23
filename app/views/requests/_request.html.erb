@@ -1,0 +1,11 @@
+<tr>
+  <td><%= index_record @requests, request_counter %></td>
+  <td><%= request.book_name %></td>
+  <td class="text-center"><%= request.created_at %></td>
+  <td class="text-center"><%= status_request(request.status).html_safe %></td>
+  <td><%= link_to t(".view"), request_path(request),
+   class: "btn btn-primary btn-sm" %></td>
+  <td><%= link_to t(".edit"), edit_request_path(request),
+   class: "btn btn-warning btn-sm" %></td>
+  <td><%= link_to t(".delete"), request_path(request), methos: :delete, data: {confirm: t(".confirm")}, class: "btn btn-danger btn-sm" %></td>
+</tr>

@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-md-4">
+    <% if @book.image.present? %>
+      <%= image_tag(@book.image.thumb.url, class: "image-book") %>
+    <% end %>
+    <br>
+    <div class="area-mark">
+      <% if logged_in? %>
+        <%= form_for [@book, @user_book], remote: true do |f| %>
+          <div class="form-group">
+            <label class="form-control">
+              <%= f.check_box :favorite, class: "click-mark" %>
+              <%= t ".favorite" %>
+            </label>
+            <label class="form-control">
+              <%= f.check_box :read, class: "click-mark" %>
+              <%= t ".read" %>
+            </label>
+            <label class="form-control">
+              <%= f.check_box :reading, class: "click-mark" %>
+              <%= t ".reading" %>
+            </label>
+          </div>
+          <%= f.submit t(".mark"), type: :submit,
+           class: "btn btn-success btn-mark-book", style: "display: none" %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <h2 class="title-book-name"><%= @book.name %></h2>
+    <h4><%= @book.author %></h4>
+    <p><%= @book.description %></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <%= render @ratings %>
+  </div>
+</div>

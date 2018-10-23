@@ -1,0 +1,17 @@
+<center><h1><%= t ".edit_request" %></h1></center>
+<div class="col-md-8 col-md-offset-1">
+    <%= form_for [:admin, @request] do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+
+      <%= f.label :book_name, t("book_name") %>
+      <%= f.text_field :book_name, class: "form-control" %>
+      <%= f.label :user_id, t("request_name") %>
+      <%= f.text_field :user_id, class: "form-control" %>
+      <%= f.label :content, t("content") %>
+      <%= f.text_field :content, class: "form-control" %><br>
+      <%= f.label :status, t(".status") %>
+      <%= f.select :status, options_for_select(@status,
+       selected: @status[@request.status]),{}, class: "form-control" %><br>
+      <%= f.submit t(".update"), type: :submit, class: "btn btn-primary" %>
+    <% end %>
+</div>

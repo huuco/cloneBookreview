@@ -1,0 +1,25 @@
+<center><h1><%= t ".review" %></h1></center>
+<div class="col-md-8">
+  <%= form_for [@book, @rating] do |f| %>
+    <%= render "shared/error_messages", object: f.object %>
+    <div class="form-group">
+      <%= f.label :title, t(".title") %>
+      <%= f.text_field :title, class: "form-control" %>
+      <%= f.label :content, t(".content") %>
+      <%= f.text_area :content, class: "form-control" %>
+    </div>
+    <%= f.submit t(".update"), type: :submit, class: "btn btn-primary" %><br>
+  <% end %>
+</div>
+<div class="col-md-4">
+  <div class="row">
+    <div class="col-md-12">
+      <%= @book.image.present? ? image_tag(@book.image.thumb.url) : image_tag("tamquoc.jpg") %>
+    </div>
+    <div class="col-md-12">
+      <h2 class="title-book-name"><%= @book.name %></h2>
+      <h4><%= @book.author %></h4>
+      <p><%= @book.description %></p>
+    </div>
+  </div>
+</div>

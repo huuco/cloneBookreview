@@ -1,0 +1,13 @@
+<tr>
+  <td><%= index_record @books, book_counter %></td>
+  <td><%= book.name %></td>
+  <td><%= book.author %></td>
+  <td class="text-center"><%= book.category_title %></td>
+  <td class="text-center"><%= book.created_at %></td>
+  <td class="text-center">
+    <%= link_to t(".view"), admin_book_path(book), class: "btn btn-primary btn-sm" %>
+    <%= link_to t(".edit"), edit_admin_book_path(book), class: "btn btn-warning btn-sm" %>
+    <%= link_to t(".delete"), admin_book_path(book), method: :delete,
+     data: {confirm: t(".confirm")}, class: "btn btn-danger btn-sm" %>
+  </td>
+</tr>

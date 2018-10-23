@@ -1,0 +1,13 @@
+<center>
+  <h1 class="review_book"><span><%= t ".title" %></span></h1>
+</center>
+<% if logged_in? %>
+  <div class="col-md-9">
+  </div>
+<% end %>
+<div class="col-md-3">
+  <center>
+    <h3 class="title-new-book"><%= t ".new_book" %></h3>
+  </center>
+  <%= render partial: "books/book", collection: @books, as: :book %>
+</div>

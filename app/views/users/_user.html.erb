@@ -1,0 +1,11 @@
+<div class="col-md-6">
+  <div class="content">
+    <div class="col-md-3">
+        <% image = user.image.present? ? user.avatar.thumb.url : "no_avatar.png" %>
+        <%= image_tag image, class: "img-avatar", style: "width: 65px" %>
+    </div>
+    <div class="col-md-6">
+      <%= link_to user.name, user %>
+    </div>
+  </div>
+</div>
